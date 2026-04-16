@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>搞钱匹配器</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@500;700&family=Outfit:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="hero">
+        <div class="hero-copy">
+          <p class="eyebrow">Money Match</p>
+          <h1>你离第一笔副业收入<br />可能只差一个对的方向</h1>
+          <p class="hero-text">
+            用你已经会的东西，赚到第一笔钱
+          </p>
+        </div>
+        <div class="hero-panel">
+          <p class="panel-kicker">这页能帮你干嘛</p>
+          <ul class="panel-list">
+            <li>盘一盘你身上哪些技能能直接变现</li>
+            <li>看清你更适合哪种搞钱路子</li>
+            <li>避开不适合自己的副业坑</li>
+            <li>直接拿到能开干的第一步建议</li>
+          </ul>
+        </div>
+      </header>
+
+      <main class="grid-layout">
+        <section class="card form-card">
+          <div class="section-head">
+            <p class="section-tag">Step 1</p>
+            <h2>填一下你的搞钱画像</h2>
+          </div>
+
+          <form id="recommendation-form">
+            <div class="field-group">
+              <label class="field-label" for="name">你的称呼</label>
+              <input id="name" name="name" type="text" placeholder="怎么叫你都行，比如小李" />
+            </div>
+
+            <div class="field-group">
+              <label class="field-label" for="goal">你现在更想要哪种结果</label>
+              <select id="goal" name="goal">
+                <option value="extra_income">先赚到第一笔钱</option>
+                <option value="stable_income">想慢慢做成稳定副收入</option>
+                <option value="freelance_path">想试试以后能不能自由接单</option>
+              </select>
+            </div>
+
+            <div class="field-group">
+              <label class="field-label" for="weekly-hours">每周可投入时间</label>
+              <select id="weekly-hours" name="weeklyHours">
+                <option value="4">摸鱼时间（1-3小时）</option>
+                <option value="8" selected>轻度投入（3-5小时）</option>
+                <option value="15">认真搞钱（5-10小时）</option>
+                <option value="25">准备 all in</option>
+              </select>
+            </div>
+
+            <div class="field-group">
+              <span class="field-label">你更想怎么搞钱</span>
+              <div class="pill-grid">
+                <label class="pill-option">
+                  <input type="checkbox" name="workStyle" value="online" checked />
+                  <span>线上就行</span>
+                </label>
+                <label class="pill-option">
+                  <input type="checkbox" name="workStyle" value="offline" />
+                  <span>线下也能接受</span>
+                </label>
+                <label class="pill-option">
+                  <input type="checkbox" name="workStyle" value="solo" checked />
+                  <span>最好自己能搞定</span>
+                </label>
+                <label class="pill-option">
+                  <input type="checkbox" name="workStyle" value="collaboration" />
+                  <span>愿意多和人打交道</span>
+                </label>
+              </div>
+            </div>
+
+            <div class="field-group">
+              <span class="field-label">哪些事你暂时不想碰</span>
+              <div class="pill-grid">
+                <label class="pill-option">
+                  <input type="checkbox" name="constraints" value="no_camera" />
+                  <span>不想露脸</span>
+                </label>
+                <label class="pill-option">
+                  <input type="checkbox" name="constraints" value="low_social" />
+                  <span>不想频繁社交</span>
+                </label>
+                <label class="pill-option">
+                  <input type="checkbox" name="constraints" value="low_startup_cost" checked />
+                  <span>希望低成本开始</span>
+                </label>
+                <label class="pill-option">
+                  <input type="checkbox" name="constraints" value="fast_feedback" />
+                  <span>希望尽快拿到反馈</span>
+                </label>
+              </div>
+            </div>
+
+            <div class="field-group">
+              <span class="field-label">问卷式偏好画像</span>
+              <p class="field-help">如果你现在也说不清自己到底适合做什么，没关系。先选这些更接近你的答案，系统会帮你少走点弯路。</p>
+
+              <div class="question-grid">
+                <div class="question-card">
+                  <label class="field-label" for="strength-type">你更像哪种人</label>
+                  <select id="strength-type" name="strengthType">
+                    <option value="expression">会表达，能输出</option>
+                    <option value="execution">能执行，能落地</option>
+                    <option value="analysis">爱分析，爱解决问题</option>
+                    <option value="teaching">会讲，会带人</option>
+                  </select>
+                </div>
+
+                <div class="question-card">
+                  <label class="field-label" for="service-target">你更想把钱赚谁的</label>
+                  <select id="service-target" name="serviceTarget">
+                    <option value="individual">个人用户的钱</option>
+                    <option value="business">商家或团队的钱</option>
+                    <option value="creator">内容创作者的钱</option>
+                    <option value="mixed">谁的都行，先来单再说</option>
+                  </select>
+                </div>
+
+                <div class="question-card">
+                  <label class="field-label" for="income-style">你更想怎么开始赚钱</label>
+                  <select id="income-style" name="incomeStyle">
+                    <option value="fast">先快点接到单</option>
+                    <option value="steady">慢一点，但想稳一点</option>
+                    <option value="accumulate">先积累作品或内容，再放大</option>
+                  </select>
+                </div>
+
+                <div class="question-card">
+                  <label class="field-label" for="task-style">你更喜欢哪种工作方式</label>
+                  <select id="task-style" name="taskStyle">
+                    <option value="creative">有创意，能发挥</option>
+                    <option value="structured">有结构，按标准来</option>
+                    <option value="repeatable">能重复，越做越熟</option>
+                    <option value="project">一个项目一个项目地完成</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+
+            <div class="field-group">
+              <span class="field-label">主业与推广方式</span>
+              <p class="field-help">你的主业和你熟悉的平台，也会影响最适合你的副业打法。</p>
+              <div class="question-grid">
+                <div class="question-card">
+                  <label class="field-label" for="primary-job">你的主业更接近什么</label>
+                  <select id="primary-job" name="primaryJob">
+                    <option value="none">暂时不想定义 / 在探索中</option>
+                    <option value="office">职场办公 / 行政 / 运营</option>
+                    <option value="education">教育 / 培训 / 语言</option>
+                    <option value="tech">互联网 / 编程 / 产品</option>
+                    <option value="design">设计 / 视觉 / 内容制作</option>
+                    <option value="sales">销售 / 商务 / 客户服务</option>
+                    <option value="media">传媒 / 自媒体 / 市场传播</option>
+                  </select>
+                </div>
+
+                <div class="question-card">
+                  <label class="field-label" for="job-related">是否希望副业与主业相关</label>
+                  <select id="job-related" name="jobRelated">
+                    <option value="yes">希望相关，最好能互相带动</option>
+                    <option value="neutral">都可以，赚钱更重要</option>
+                    <option value="no">不想太相关，想分开搞</option>
+                  </select>
+                </div>
+
+                <div class="question-card">
+                  <label class="field-label" for="familiar-platform">你更熟悉哪个自媒体平台</label>
+                  <select id="familiar-platform" name="familiarPlatform">
+                    <option value="xiaohongshu">小红书</option>
+                    <option value="douyin">抖音</option>
+                    <option value="bilibili">B 站</option>
+                    <option value="wechat">公众号</option>
+                    <option value="zhihu">知乎</option>
+                    <option value="weibo">微博</option>
+                    <option value="none">暂时没有特别熟悉的平台</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+
+            <div class="field-group">
+              <div class="skills-head">
+                <div>
+                  <span class="field-label">你现在手上有哪些能拿去变现的本事</span>
+                  <p class="field-help">不用想太复杂。每项打两个分：一个是你到底会不会，另一个是你愿不愿意靠它赚钱。</p>
+                </div>
+                <div class="score-hint">1 = 不太行 / 没兴趣，5 = 很能打 / 很愿意</div>
+              </div>
+
+              <div id="skills-matrix" class="skills-matrix"></div>
+            </div>
+
+            <div class="field-group">
+              <label class="field-label" for="notes">还有什么想提前说的</label>
+              <textarea
+                id="notes"
+                name="notes"
+                rows="4"
+                placeholder="比如：白天上班，只能晚上搞；想先在线上试试；想快点赚到第一笔，不想一开始搞太重。"
+              ></textarea>
+            </div>
+
+            <button class="primary-button" type="submit">开始匹配搞钱路子</button>
+          </form>
+        </section>
+
+        <section class="card results-card">
+          <div class="section-head">
+            <p class="section-tag">Step 2</p>
+            <h2>你的搞钱方向出来了</h2>
+          </div>
+
+          <div id="empty-state" class="empty-state">
+            <p>左边填完以后，这里会直接告诉你：现阶段最适合你先赚第一笔钱的几个方向。</p>
+          </div>
+
+          <div id="results" class="results"></div>
+        </section>
+      </main>
+    </div>
+
+    <template id="result-card-template">
+      <article class="result-card">
+        <div class="result-top">
+          <div>
+            <p class="result-rank"></p>
+            <h3 class="result-title"></h3>
+          </div>
+          <div class="score-badge"></div>
+        </div>
+        <p class="result-summary"></p>
+        <div class="result-block">
+          <h4>为什么这条路更适合你</h4>
+          <ul class="reason-list"></ul>
+        </div>
+        <div class="result-block">
+          <h4>怎么开始更容易赚到第一笔</h4>
+          <p class="starter-plan"></p>
+        </div>
+        <div class="result-block">
+          <h4>怎么发，才更容易来钱</h4>
+          <p class="promotion-plan"></p>
+        </div>
+        <div class="meta-row">
+          <span class="meta-chip effort-chip"></span>
+          <span class="meta-chip style-chip"></span>
+          <span class="meta-chip risk-chip"></span>
+        </div>
+      </article>
+    </template>
+
+    <script src="./app.js"></script>
+  </body>
+</html>
