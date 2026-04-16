@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="./styles.css" />
   </head>
   <body>
-    <div class="page-shell">
+    <div class="page-shell page-shell-home" id="home-screen">
       <header class="hero">
         <div class="hero-copy">
           <p class="eyebrow">Money Match</p>
@@ -21,14 +21,19 @@
           <p class="hero-text">
             用你已经会的东西，赚到第一笔钱
           </p>
+          <div class="hero-badges">
+            <span class="hero-badge">先赚到第一笔</span>
+            <span class="hero-badge">少走弯路</span>
+            <span class="hero-badge">能马上开干</span>
+          </div>
         </div>
         <div class="hero-panel">
-          <p class="panel-kicker">这页能帮你干嘛</p>
+          <p class="panel-kicker">搞钱不是玄学</p>
           <ul class="panel-list">
             <li>盘一盘你身上哪些技能能直接变现</li>
             <li>看清你更适合哪种搞钱路子</li>
             <li>避开不适合自己的副业坑</li>
-            <li>直接拿到能开干的第一步建议</li>
+            <li>直接拿到能开干的内容和接单建议</li>
           </ul>
         </div>
       </header>
@@ -66,98 +71,254 @@
             </div>
 
             <div class="field-group">
-              <span class="field-label">你更想怎么搞钱</span>
+              <span class="field-label">兴趣偏好</span>
+              <p class="field-help">先选你愿意长期碰的题材。搞钱这件事，能不能坚持，很多时候就看你对这个方向有没有一点真兴趣。</p>
               <div class="pill-grid">
                 <label class="pill-option">
-                  <input type="checkbox" name="workStyle" value="online" checked />
-                  <span>线上就行</span>
+                  <input type="checkbox" name="interests" value="photography" />
+                  <span>摄影</span>
                 </label>
                 <label class="pill-option">
-                  <input type="checkbox" name="workStyle" value="offline" />
-                  <span>线下也能接受</span>
+                  <input type="checkbox" name="interests" value="writing" />
+                  <span>写作</span>
                 </label>
                 <label class="pill-option">
-                  <input type="checkbox" name="workStyle" value="solo" checked />
-                  <span>最好自己能搞定</span>
+                  <input type="checkbox" name="interests" value="money" />
+                  <span>赚钱研究</span>
                 </label>
                 <label class="pill-option">
-                  <input type="checkbox" name="workStyle" value="collaboration" />
-                  <span>愿意多和人打交道</span>
+                  <input type="checkbox" name="interests" value="social" />
+                  <span>社交</span>
+                </label>
+                <label class="pill-option">
+                  <input type="checkbox" name="interests" value="gaming" />
+                  <span>游戏</span>
+                </label>
+                <label class="pill-option">
+                  <input type="checkbox" name="interests" value="travel" />
+                  <span>旅行</span>
+                </label>
+                <label class="pill-option">
+                  <input type="checkbox" name="interests" value="food" />
+                  <span>美食</span>
+                </label>
+                <label class="pill-option">
+                  <input type="checkbox" name="interests" value="fashion" />
+                  <span>穿搭审美</span>
+                </label>
+                <label class="pill-option">
+                  <input type="checkbox" name="interests" value="pet" />
+                  <span>宠物</span>
+                </label>
+                <label class="pill-option">
+                  <input type="checkbox" name="interests" value="learning" />
+                  <span>学习成长</span>
                 </label>
               </div>
             </div>
 
             <div class="field-group">
-              <span class="field-label">哪些事你暂时不想碰</span>
+              <span class="field-label">性格标签</span>
+              <p class="field-help">不用想得太标准，选更像你的就行。</p>
               <div class="pill-grid">
                 <label class="pill-option">
-                  <input type="checkbox" name="constraints" value="no_camera" />
+                  <input type="checkbox" name="personality" value="extrovert" />
+                  <span>外向</span>
+                </label>
+                <label class="pill-option">
+                  <input type="checkbox" name="personality" value="introvert" />
+                  <span>内向</span>
+                </label>
+                <label class="pill-option">
+                  <input type="checkbox" name="personality" value="result_driven" />
+                  <span>结果导向</span>
+                </label>
+                <label class="pill-option">
+                  <input type="checkbox" name="personality" value="creative" />
+                  <span>创意型</span>
+                </label>
+                <label class="pill-option">
+                  <input type="checkbox" name="personality" value="stable" />
+                  <span>稳定型</span>
+                </label>
+                <label class="pill-option">
+                  <input type="checkbox" name="personality" value="adventurous" />
+                  <span>冒险型</span>
+                </label>
+                <label class="pill-option">
+                  <input type="checkbox" name="personality" value="analytical" />
+                  <span>分析型</span>
+                </label>
+                <label class="pill-option">
+                  <input type="checkbox" name="personality" value="patient" />
+                  <span>耐心型</span>
+                </label>
+              </div>
+            </div>
+
+            <div class="field-group">
+              <span class="field-label">能力标签</span>
+              <p class="field-help">这里不是考试，是找你最容易换到钱的能力点。</p>
+              <div class="pill-grid">
+                <label class="pill-option">
+                  <input type="checkbox" name="abilities" value="communication" />
+                  <span>沟通能力</span>
+                </label>
+                <label class="pill-option">
+                  <input type="checkbox" name="abilities" value="execution" />
+                  <span>执行力</span>
+                </label>
+                <label class="pill-option">
+                  <input type="checkbox" name="abilities" value="aesthetic" />
+                  <span>审美</span>
+                </label>
+                <label class="pill-option">
+                  <input type="checkbox" name="abilities" value="data" />
+                  <span>数据分析</span>
+                </label>
+                <label class="pill-option">
+                  <input type="checkbox" name="abilities" value="writing" />
+                  <span>内容表达</span>
+                </label>
+                <label class="pill-option">
+                  <input type="checkbox" name="abilities" value="editing" />
+                  <span>拍摄剪辑</span>
+                </label>
+                <label class="pill-option">
+                  <input type="checkbox" name="abilities" value="organization" />
+                  <span>资源整合</span>
+                </label>
+                <label class="pill-option">
+                  <input type="checkbox" name="abilities" value="sales" />
+                  <span>成交能力</span>
+                </label>
+                <label class="pill-option">
+                  <input type="checkbox" name="abilities" value="teaching" />
+                  <span>讲解辅导</span>
+                </label>
+                <label class="pill-option">
+                  <input type="checkbox" name="abilities" value="no_special_skill" />
+                  <span>暂时没明显特长</span>
+                </label>
+              </div>
+            </div>
+
+            <div class="field-group">
+              <span class="field-label">资源标签</span>
+              <p class="field-help">很多副业不是拼能力，而是拼你现在手里有什么可用资源。</p>
+              <div class="pill-grid">
+                <label class="pill-option">
+                  <input type="checkbox" name="resources" value="time" />
+                  <span>时间多</span>
+                </label>
+                <label class="pill-option">
+                  <input type="checkbox" name="resources" value="network" />
+                  <span>有人脉</span>
+                </label>
+                <label class="pill-option">
+                  <input type="checkbox" name="resources" value="capital" />
+                  <span>有资金</span>
+                </label>
+                <label class="pill-option">
+                  <input type="checkbox" name="resources" value="overseas" />
+                  <span>在海外</span>
+                </label>
+                <label class="pill-option">
+                  <input type="checkbox" name="resources" value="student" />
+                  <span>学生</span>
+                </label>
+                <label class="pill-option">
+                  <input type="checkbox" name="resources" value="local" />
+                  <span>有本地资源</span>
+                </label>
+                <label class="pill-option">
+                  <input type="checkbox" name="resources" value="equipment" />
+                  <span>有设备 / 工具</span>
+                </label>
+              </div>
+            </div>
+
+            <div class="field-group">
+              <span class="field-label">地区 / 身份</span>
+              <p class="field-help">同样的能力，在不同身份和地区里，最赚钱的路径会完全不一样。</p>
+              <div class="pill-grid">
+                <label class="pill-option">
+                  <input type="checkbox" name="identities" value="overseas_person" />
+                  <span>海外人士</span>
+                </label>
+                <label class="pill-option">
+                  <input type="checkbox" name="identities" value="international_student" />
+                  <span>留学生</span>
+                </label>
+                <label class="pill-option">
+                  <input type="checkbox" name="identities" value="office_worker" />
+                  <span>上班族</span>
+                </label>
+                <label class="pill-option">
+                  <input type="checkbox" name="identities" value="student_user" />
+                  <span>学生</span>
+                </label>
+                <label class="pill-option">
+                  <input type="checkbox" name="identities" value="freelancer" />
+                  <span>自由职业 / 灵活就业</span>
+                </label>
+                <label class="pill-option">
+                  <input type="checkbox" name="identities" value="creator" />
+                  <span>内容创作者</span>
+                </label>
+              </div>
+            </div>
+
+            <div class="field-group">
+              <span class="field-label">偏好设置</span>
+              <p class="field-help">这些会直接影响推荐结果是不是“你真的做得下去”。</p>
+              <div class="pill-grid">
+                <label class="pill-option">
+                  <input type="checkbox" name="preferences" value="no_face" />
                   <span>不想露脸</span>
                 </label>
                 <label class="pill-option">
-                  <input type="checkbox" name="constraints" value="low_social" />
-                  <span>不想频繁社交</span>
+                  <input type="checkbox" name="preferences" value="face_ok" />
+                  <span>可以露脸</span>
                 </label>
                 <label class="pill-option">
-                  <input type="checkbox" name="constraints" value="low_startup_cost" checked />
-                  <span>希望低成本开始</span>
+                  <input type="checkbox" name="preferences" value="no_sales" />
+                  <span>不想销售</span>
                 </label>
                 <label class="pill-option">
-                  <input type="checkbox" name="constraints" value="fast_feedback" />
-                  <span>希望尽快拿到反馈</span>
+                  <input type="checkbox" name="preferences" value="sales_ok" />
+                  <span>可以卖东西</span>
+                </label>
+                <label class="pill-option">
+                  <input type="checkbox" name="preferences" value="long_term" />
+                  <span>愿意长期投入</span>
+                </label>
+                <label class="pill-option">
+                  <input type="checkbox" name="preferences" value="quick_cash" />
+                  <span>想尽快见钱</span>
+                </label>
+                <label class="pill-option">
+                  <input type="checkbox" name="preferences" value="online" checked />
+                  <span>线上优先</span>
+                </label>
+                <label class="pill-option">
+                  <input type="checkbox" name="preferences" value="offline" />
+                  <span>线下也行</span>
+                </label>
+                <label class="pill-option">
+                  <input type="checkbox" name="preferences" value="solo" checked />
+                  <span>最好自己搞定</span>
+                </label>
+                <label class="pill-option">
+                  <input type="checkbox" name="preferences" value="collab" />
+                  <span>愿意和人合作</span>
                 </label>
               </div>
             </div>
 
             <div class="field-group">
-              <span class="field-label">问卷式偏好画像</span>
-              <p class="field-help">如果你现在也说不清自己到底适合做什么，没关系。先选这些更接近你的答案，系统会帮你少走点弯路。</p>
-
-              <div class="question-grid">
-                <div class="question-card">
-                  <label class="field-label" for="strength-type">你更像哪种人</label>
-                  <select id="strength-type" name="strengthType">
-                    <option value="expression">会表达，能输出</option>
-                    <option value="execution">能执行，能落地</option>
-                    <option value="analysis">爱分析，爱解决问题</option>
-                    <option value="teaching">会讲，会带人</option>
-                  </select>
-                </div>
-
-                <div class="question-card">
-                  <label class="field-label" for="service-target">你更想把钱赚谁的</label>
-                  <select id="service-target" name="serviceTarget">
-                    <option value="individual">个人用户的钱</option>
-                    <option value="business">商家或团队的钱</option>
-                    <option value="creator">内容创作者的钱</option>
-                    <option value="mixed">谁的都行，先来单再说</option>
-                  </select>
-                </div>
-
-                <div class="question-card">
-                  <label class="field-label" for="income-style">你更想怎么开始赚钱</label>
-                  <select id="income-style" name="incomeStyle">
-                    <option value="fast">先快点接到单</option>
-                    <option value="steady">慢一点，但想稳一点</option>
-                    <option value="accumulate">先积累作品或内容，再放大</option>
-                  </select>
-                </div>
-
-                <div class="question-card">
-                  <label class="field-label" for="task-style">你更喜欢哪种工作方式</label>
-                  <select id="task-style" name="taskStyle">
-                    <option value="creative">有创意，能发挥</option>
-                    <option value="structured">有结构，按标准来</option>
-                    <option value="repeatable">能重复，越做越熟</option>
-                    <option value="project">一个项目一个项目地完成</option>
-                  </select>
-                </div>
-              </div>
-            </div>
-
-            <div class="field-group">
-              <span class="field-label">主业与推广方式</span>
-              <p class="field-help">你的主业和你熟悉的平台，也会影响最适合你的副业打法。</p>
+              <span class="field-label">主业与平台</span>
+              <p class="field-help">你的主业和熟悉的平台，也会影响什么方向最容易起步。</p>
               <div class="question-grid">
                 <div class="question-card">
                   <label class="field-label" for="primary-job">你的主业更接近什么</label>
@@ -169,6 +330,10 @@
                     <option value="design">设计 / 视觉 / 内容制作</option>
                     <option value="sales">销售 / 商务 / 客户服务</option>
                     <option value="media">传媒 / 自媒体 / 市场传播</option>
+                    <option value="finance">金融 / 财会 / 投资</option>
+                    <option value="research">科研 / 学术 / 实验室</option>
+                    <option value="legal">法律 / 合规 / 咨询</option>
+                    <option value="medical">医疗 / 护理 / 健康服务</option>
                   </select>
                 </div>
 
@@ -182,7 +347,7 @@
                 </div>
 
                 <div class="question-card">
-                  <label class="field-label" for="familiar-platform">你更熟悉哪个自媒体平台</label>
+                  <label class="field-label" for="familiar-platform">你更熟悉哪个平台</label>
                   <select id="familiar-platform" name="familiarPlatform">
                     <option value="xiaohongshu">小红书</option>
                     <option value="douyin">抖音</option>
@@ -199,10 +364,10 @@
             <div class="field-group">
               <div class="skills-head">
                 <div>
-                  <span class="field-label">你现在手上有哪些能拿去变现的本事</span>
-                  <p class="field-help">不用想太复杂。每项打两个分：一个是你到底会不会，另一个是你愿不愿意靠它赚钱。</p>
+                  <span class="field-label">搞钱能力打分表</span>
+                  <p class="field-help">把最开始那套打分保留回来。你不一定什么都会，但你更强的那一项，往往决定你适合走哪条赚钱路。</p>
                 </div>
-                <div class="score-hint">1 = 不太行 / 没兴趣，5 = 很能打 / 很愿意</div>
+                <div class="score-hint">1 = 一般 / 5 = 很能打</div>
               </div>
 
               <div id="skills-matrix" class="skills-matrix"></div>
@@ -237,6 +402,29 @@
       </main>
     </div>
 
+    <section class="result-screen hidden" id="result-screen">
+      <div class="result-screen-inner">
+        <div class="result-screen-head">
+          <div class="result-transition" aria-hidden="true">
+            <span class="transition-flash"></span>
+            <span class="transition-coin transition-coin-a"></span>
+            <span class="transition-coin transition-coin-b"></span>
+            <span class="transition-coin transition-coin-c"></span>
+            <span class="transition-coin transition-coin-d"></span>
+            <span class="transition-coin transition-coin-e"></span>
+            <span class="transition-box-base"></span>
+            <span class="transition-box-lid"></span>
+          </div>
+          <p class="section-tag">Step 2</p>
+          <h2>你的搞钱方向出来了</h2>
+          <p class="result-screen-text">先别想太远，先把第一笔钱跑出来。下面这些建议，就是你接下来 7 天最值得开始的事。</p>
+          <button class="secondary-button" id="back-button" type="button">返回继续调整</button>
+        </div>
+
+        <div id="result-screen-list" class="results"></div>
+      </div>
+    </section>
+
     <template id="result-card-template">
       <article class="result-card">
         <div class="result-top">
@@ -246,23 +434,59 @@
           </div>
           <div class="score-badge"></div>
         </div>
+        <div class="loot-burst" aria-hidden="true">
+          <span class="box-flash"></span>
+          <span class="coin coin-a"></span>
+          <span class="coin coin-b"></span>
+          <span class="coin coin-c"></span>
+          <span class="coin coin-d"></span>
+          <span class="coin coin-e"></span>
+          <span class="money-box-base"></span>
+          <span class="money-box-lid"></span>
+        </div>
         <p class="result-summary"></p>
         <div class="result-block">
-          <h4>为什么这条路更适合你</h4>
+          <h4>适合原因</h4>
           <ul class="reason-list"></ul>
         </div>
         <div class="result-block">
-          <h4>怎么开始更容易赚到第一笔</h4>
-          <p class="starter-plan"></p>
+          <h4>具体怎么开始</h4>
+          <ul class="starter-plan"></ul>
         </div>
         <div class="result-block">
-          <h4>怎么发，才更容易来钱</h4>
-          <p class="promotion-plan"></p>
+          <h4>变现方式</h4>
+          <p class="monetization-plan"></p>
         </div>
+        <div class="result-block">
+          <h4>第一笔钱怎么来</h4>
+          <p class="first-money-plan"></p>
+        </div>
+        <div class="result-block">
+          <h4>去哪里找机会</h4>
+          <ul class="search-plan"></ul>
+        </div>
+        <div class="result-block">
+          <h4>放大建议</h4>
+          <p class="scale-plan"></p>
+        </div>
+        <div class="result-block">
+          <h4>容易踩的坑</h4>
+          <ul class="pitfall-plan"></ul>
+        </div>
+        <div class="result-block">
+          <h4>更适合哪类人</h4>
+          <p class="fit-profile"></p>
+        </div>
+        <div class="result-block">
+          <h4>7 天执行计划</h4>
+          <ul class="day-plan"></ul>
+        </div>
+        <p class="result-encouragement"></p>
         <div class="meta-row">
-          <span class="meta-chip effort-chip"></span>
-          <span class="meta-chip style-chip"></span>
-          <span class="meta-chip risk-chip"></span>
+          <span class="meta-chip mode-chip"></span>
+          <span class="meta-chip barrier-chip"></span>
+          <span class="meta-chip newbie-chip"></span>
+          <span class="meta-chip longterm-chip"></span>
         </div>
       </article>
     </template>
